@@ -1,7 +1,9 @@
 const words = ["Laptop", "Etui", "Potlood", "Papier", "Boek"];
 const hints = ["Hier kan je al je schoolwerk op vinden", "Bewaar je pennen in", "Kan je mee schrijven", "Kan je op schrijven", "Kan je lezen"];
 let displayWord = ""
+//De woorden die tevoorschijn kunnen komen.
 
+//Bron: https://www.geeksforgeeks.org/word-scramble-game-using-javascript/?ref=lbp
 function shuffle(str){
     strArray = Array.from(str);
     for (let i = 0; i < strArray.length - 1; ++i){
@@ -12,6 +14,7 @@ function shuffle(str){
     }
     return strArray.join(" ");
 }
+//De code hierboven zorgt ervoor dat de letters gehusseld worden.
 
 //Bron: https://www.geeksforgeeks.org/word-scramble-game-using-javascript/?ref=lbp
 function check(){
@@ -24,6 +27,7 @@ function check(){
     output.innerHTML = "Result: Correct";
     else output.innerHTML = "Result: Incorrect";
 }
+//De code hierboven zorgt ervoor dat er gecontroleerd word of het woord dat je in typt hetzelfde is als het gehusselde woord. 
 
 //Bron: https://www.geeksforgeeks.org/word-scramble-game-using-javascript/?ref=lbp
 function refresh(){
@@ -36,5 +40,6 @@ function refresh(){
     hint.innerHTML = "<b>Hint:</b>" + displayHint;
     document.querySelector("#output").innerText = "Result:";
 }
+//De code hierboven zorgt ervoor dat het een ander woord wordt.
 
 refresh();
