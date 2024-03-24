@@ -13,6 +13,7 @@ function shuffle(str){
     return strArray.join(" ");
 }
 
+//Bron: https://www.geeksforgeeks.org/word-scramble-game-using-javascript/?ref=lbp
 function check(){
     let input = document.querySelector("#input");
     let output = document.querySelector("#output");
@@ -24,6 +25,7 @@ function check(){
     else output.innerHTML = "Result: Incorrect";
 }
 
+//Bron: https://www.geeksforgeeks.org/word-scramble-game-using-javascript/?ref=lbp
 function refresh(){
     index = Math.floor(Math.random() * 5);
     displayWord = words[index];
